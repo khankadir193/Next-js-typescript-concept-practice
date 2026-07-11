@@ -1,0 +1,29 @@
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px 0;
+    gap: 10px;
+    height: 100vh;
+}
+
+.card{
+    width: 300px;
+    border: 2px solid #ddd;
+    padding: 20px 20px;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    color: peru;
+}
+
+.card:hover{
+    box-shadow: 0 3px 20px rgba(red, green, blue, alpha);
+    color: navajowhite;
+}
+
+.profileImage{
+    border: 5px solid navajowhite;
+    border-radius: 50%;
+    object-fit: cover;
+}
