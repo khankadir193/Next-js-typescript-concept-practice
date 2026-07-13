@@ -1,5 +1,5 @@
-import UserProfileCard from "@/components/UserCard";
-import styles from '../components/UserCard.module.css';
+import UserProfileCard from "@/components/UserCard/UserCard";
+import styles from '../components/UserCard/UserCard.module.css';
 
 type User = {
     id: number,
