@@ -1,13 +1,6 @@
+import { User } from '../types/product';
 import styles from './UserCard.module.css';
 import Image from 'next/image';
-
-type User = {
-    id: number,
-    name: string,
-    email: string,
-    age: number,
-    image:string
-}
 
 type UserProfileCardProps = {
     user: User
