@@ -3,6 +3,7 @@ import styles from '../components/UserCard/UserCard.module.css';
 import ProductList from "@/components/ProductList/ProductList";
 import { productListData } from "@/components/ProductList/ProductListData";
 import { Product, User } from '@/components/types/product'
+import UserForm from "@/components/Form/UserForm";
 
 
 export default function Home() {
@@ -25,13 +26,18 @@ export default function Home() {
   return (
     <>
       {/* user objects is belong this components */}
-      <div className={styles.container}>
+      {/* <div className={styles.container}>
          <UserProfileCard  user={user}/>
-      </div>
+      </div> */}
 
       {/* <div>
         <ProductList productListData={productListData} />
       </div> */}
+
+      {/* user form  */}
+      <div>
+        <UserForm />
+      </div>
     </>
   );
 }

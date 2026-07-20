@@ -1,0 +1,23 @@
+.formContainer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* width: 1000px; */
+    align-items: center;
+    gap: 12px;
+    margin: 20px;
+}
+
+.nameemailInput{
+    border: 2px solid rgb(50, 50, 113);
+    border-radius: 5px;
+    padding: 4px 8px;
+}
+
+.subtBtn{
+    background-color: rgb(14, 111, 196);
+    padding: 8px 16px;
+    color: white;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    border-radius: 10px;
+}
