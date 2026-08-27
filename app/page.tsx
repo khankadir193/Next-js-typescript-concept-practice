@@ -4,6 +4,7 @@ import ProductList from "@/components/ProductList/ProductList";
 import { productListData } from "@/components/ProductList/ProductListData";
 import { Product, User } from '@/components/types/product'
 import UserForm from "@/components/Form/UserForm";
+import Navbar from "@/components/NavBar/page";
 
 
 export default function Home() {
@@ -35,9 +36,12 @@ export default function Home() {
       </div> */}
 
       {/* user form  */}
-      <div>
+      {/* <div>
         <UserForm />
-      </div>
+      </div> */}
+
+      <Navbar />
+      
     </>
   );
 }
