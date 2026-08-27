@@ -15,6 +15,10 @@ const navItems : navItem[] = [
     {
         label:'Contact',
         href:'/Contact'
+    },
+    {
+        label:'Users',
+        href:'/Users'
     }
 ]
 
