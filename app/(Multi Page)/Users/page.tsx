@@ -21,8 +21,10 @@ export default function UsersPage(){
             <h1>Users</h1>
             {
                 users.map((user)=>(
-                    <div key={user.id}> 
-                        <p>{user?.id}.{user?.name}</p>
+                    <div key={user.id}>
+                        <Link href={`/Users/${user.id}`}>
+                            <p>{user?.id}.{user?.name}</p>
+                        </Link>
                     </div>
                 ))
             }
