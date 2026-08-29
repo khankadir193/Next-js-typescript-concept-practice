@@ -5,6 +5,7 @@ import { productListData } from "@/components/ProductList/ProductListData";
 import { Product, User } from '@/components/types/product'
 import UserForm from "@/components/Form/UserForm";
 import Navbar from "@/components/NavBar/page";
+import ApiServices from "@/components/Api/ApiServices";
 
 
 export default function Home() {
@@ -40,7 +41,9 @@ export default function Home() {
         <UserForm />
       </div> */}
 
-      <Navbar />
+      {/* <Navbar /> */}
+
+      <ApiServices />
       
     </>
   );
