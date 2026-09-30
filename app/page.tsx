@@ -7,6 +7,7 @@ import UserForm from "@/components/Form/UserForm";
 import Navbar from "@/components/NavBar/page";
 import ApiServices from "@/components/Api/ApiServices";
 import SearchComponent from "@/components/Search/SearchComponent";
+import JobForm from "@/components/JobApplicationForm/Form";
 
 
 export default function Home() {
@@ -46,7 +47,8 @@ export default function Home() {
 
       {/* <ApiServices /> */}
 
-      <SearchComponent />
+      {/* <SearchComponent /> */}
+      <JobForm />
     </>
   );
 }
