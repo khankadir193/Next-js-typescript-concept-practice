@@ -38,3 +38,9 @@ input,textarea,select{
     /* align-items: center; */
 }
 
+.red{
+    color: red;
+    background-color: aqua;
+    padding: 5px 100px;
+}
+

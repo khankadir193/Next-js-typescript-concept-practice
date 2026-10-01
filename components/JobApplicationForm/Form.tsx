@@ -3,6 +3,17 @@ import { useState } from "react";
 import { JobFormData } from "../types/JobFormData";
 import './style.css';
 
+type FormErrors = {
+    fullName?:string,
+    email?:string,
+    phone?:string,
+    jobRole?:string,
+    experience?:string,
+    skills?:string,
+    resume?:string,
+    coverLetter?:string
+}
+
 const JobForm = () => {
     const [formData, setFormData] = useState<JobFormData>({
         fullName: '',
@@ -14,16 +25,80 @@ const JobForm = () => {
         resume: null,
         coverLetter: ''
     });
+    const [errors,setErrors] = useState<string[]>([]);
+
 
     const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault();
 
+        setErrors([]);
+
         console.log('from data...', formData);
+
+        if(formData.resume){
+            console.log('Resume name:-',formData.resume.name);
+            console.log('Resume Type:-',formData.resume.type);
+            console.log('Resume size:-',formData.resume.size);
+        }
+
+        const newErrors : string[] = [];
+
+        if(!formData.fullName){
+            newErrors.push('FullName is required!');
+        }
+
+        if(!formData.email){
+            newErrors.push('Email is required!');
+        }
+
+        if(!formData.phone){
+            newErrors.push('Phone is required!');
+        }
+
+        if(!formData.jobRole){
+            newErrors.push('Job Role is required!');
+        }
+
+        if(formData.experience <= 0){
+            newErrors.push('Experience is required!');
+        }
+
+        if(!formData.skills){
+            newErrors.push('Skills is required!');
+        }
+
+        if(!formData.resume){
+            newErrors.push('Resume is required!');
+        }
+
+        if(!formData.coverLetter){
+            newErrors.push('CoverLetter is required!');
+        }
+
+        if(newErrors.length > 0){
+            setErrors(newErrors);
+
+            return;
+        }
     }
 
 
     return (
         <form onSubmit={handleSubmit}>
+            {
+                errors.length > 0 && (
+                    <div>
+                        {
+                            errors.map((error,index)=>{
+                                return (
+                                    <p key={index} className="red">{error}</p>
+                                )
+                            })
+                        }
+                    </div>
+                )
+            }
+
             <div className="inputLable">
                 <label htmlFor="fullName">fullName</label>
                 <input
